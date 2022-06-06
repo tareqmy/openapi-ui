@@ -1,10 +1,9 @@
 FROM node:14.18.2-alpine as build
 WORKDIR /app
-COPY . ./
 
 RUN apk --no-cache add --virtual native-deps g++ gcc libgcc libstdc++ linux-headers make python3
+COPY . ./
 RUN npm install
-RUN apk del native-deps
 RUN npm run build:prod
 
 

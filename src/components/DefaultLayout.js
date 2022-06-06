@@ -17,7 +17,7 @@ const DefaultLayout = () => {
             <Header style={{position: 'fixed', zIndex: 1, width: '100%', color: "#ffffff"}}>
                 <div style={{display: 'flex', justifyContent: 'space-between'}}>
                     <div>
-                        <b>Improve digital</b> <sub>OpenAPI 3.0</sub>
+                        <b>Spring cloud examples</b> <sub>OpenAPI 3.0</sub>
                     </div>
                     <div style={{display: 'flex', alignItems: 'center'}}>
                         <Button

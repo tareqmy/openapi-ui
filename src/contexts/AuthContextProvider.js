@@ -19,8 +19,8 @@ const AuthContextProvider = ({children}) => {
             setLoading(true);
             const response = await AuthService.login(credential);
 
-            localStorage.setItem(ACCESS_TOKEN, response.data.value);
-            localStorage.setItem(REFRESH_TOKEN, response.data.refreshToken.value);
+            localStorage.setItem(ACCESS_TOKEN, response.data.access_token);
+            localStorage.setItem(REFRESH_TOKEN, response.data.refresh_token);
 
             setIsLogin(true);
             setLoading(false);

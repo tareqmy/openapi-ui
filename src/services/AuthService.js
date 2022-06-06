@@ -9,6 +9,7 @@ export default class AuthService {
         _data.append('grant_type', 'password');
         _data.append('username', data.username);
         _data.append('password', data.password);
+        _data.append('scope', 'openid');
 
         return publicAPI.post(USER_LOGIN_URL, _data, {headers: apiUserAuth()});
     }
