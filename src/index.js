@@ -1,0 +1,21 @@
+import {createRoot} from 'react-dom/client';
+
+// SCSS & CSS
+import 'antd/dist/antd.min.css';
+
+import reportWebVitals from './reportWebVitals';
+import {getAppWithContextProviders} from "./helpers/ContextBinder";
+
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
+root.render(
+    // <React.StrictMode>
+    getAppWithContextProviders()
+    // </React.StrictMode>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
